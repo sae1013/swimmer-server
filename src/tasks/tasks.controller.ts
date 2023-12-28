@@ -9,6 +9,7 @@ export class TasksController {
 
   @Get('/')
   getTasks(): Task[] {
+    console.log(process.env.DB_USER);
     return this.tasksService.getAllTasks();
   }
   @Post('/create')
